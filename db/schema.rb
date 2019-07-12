@@ -45,3 +45,4 @@ ActiveRecord::Schema.define(version: 2019_07_11_201441) do
 
   add_foreign_key "items", "lists"
 end
+

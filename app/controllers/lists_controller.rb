@@ -16,8 +16,11 @@ class ListsController < ApplicationController
 
 
   def show
-        @list = List.find(params[:id])
+    @list = List.find(params[:id])
+    authorize @list
 
+    @items = Item.where(list_id: @list)
+    @item = Item.new
   end
 
   def edit
